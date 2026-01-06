@@ -1,0 +1,841 @@
+(skateformer) phonght@phonght:/mnt/A87E3F8E7E3F5472/CapstoneProject$ python my_src/train/train.py 
+Device: cuda
+Train samples: 1882, Val samples: 470
+/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/torch/functional.py:478: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1659484809662/work/aten/src/ATen/native/TensorShape.cpp:2894.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Starting training for 200 epochs...
+Epoch 1/200 [Train]: 100%|█| 118/118 [00:24<00:00,  4.75it/s, acc=1.7, loss=1.03
+Epoch 1 [Val] Loss: 4.1092 | Acc: 1.28%
+Ep 1| LR: 8.00e-06 | Train Loss: 4.1201 | Train Acc: 1.70% | Val Acc: 1.28%
+----> Saved Best Model: 1.28%
+Epoch 2/200 [Train]: 100%|████████████████| 118/118 [00:22<00:00,  5.22it/s, acc=1.97, loss=1.01]
+Epoch 2 [Val] Loss: 4.0381 | Acc: 1.91%
+Ep 2| LR: 1.60e-05 | Train Loss: 4.0835 | Train Acc: 1.97% | Val Acc: 1.91%
+----> Saved Best Model: 1.91%
+Epoch 3/200 [Train]: 100%|███████████████| 118/118 [00:22<00:00,  5.20it/s, acc=4.41, loss=0.916]
+Epoch 3 [Val] Loss: 3.9115 | Acc: 3.40%
+Ep 3| LR: 2.40e-05 | Train Loss: 3.9855 | Train Acc: 4.41% | Val Acc: 3.40%
+----> Saved Best Model: 3.40%
+Epoch 4/200 [Train]: 100%|████████████████| 118/118 [00:22<00:00,  5.20it/s, acc=5.63, loss=1.02]
+Epoch 4 [Val] Loss: 3.7449 | Acc: 6.60%
+Ep 4| LR: 3.20e-05 | Train Loss: 3.8523 | Train Acc: 5.63% | Val Acc: 6.60%
+----> Saved Best Model: 6.60%
+Epoch 5/200 [Train]: 100%|███████████████| 118/118 [00:22<00:00,  5.18it/s, acc=6.22, loss=0.899]
+Epoch 5 [Val] Loss: 3.6181 | Acc: 6.17%
+Ep 5| LR: 4.00e-05 | Train Loss: 3.7201 | Train Acc: 6.22% | Val Acc: 6.17%
+Epoch 6/200 [Train]: 100%|███████████████| 118/118 [00:22<00:00,  5.17it/s, acc=8.24, loss=0.868]
+Epoch 6 [Val] Loss: 3.5668 | Acc: 8.30%
+Ep 6| LR: 4.80e-05 | Train Loss: 3.6304 | Train Acc: 8.24% | Val Acc: 8.30%
+----> Saved Best Model: 8.30%
+Epoch 7/200 [Train]: 100%|███████████████| 118/118 [00:22<00:00,  5.18it/s, acc=9.62, loss=0.879]
+Epoch 7 [Val] Loss: 3.4676 | Acc: 8.94%
+Ep 7| LR: 5.60e-05 | Train Loss: 3.5568 | Train Acc: 9.62% | Val Acc: 8.94%
+----> Saved Best Model: 8.94%
+Epoch 8/200 [Train]: 100%|███████████████| 118/118 [00:22<00:00,  5.16it/s, acc=9.78, loss=0.941]
+Epoch 8 [Val] Loss: 3.4768 | Acc: 10.43%
+Ep 8| LR: 6.40e-05 | Train Loss: 3.5223 | Train Acc: 9.78% | Val Acc: 10.43%
+----> Saved Best Model: 10.43%
+Epoch 9/200 [Train]: 100%|████████████████| 118/118 [00:22<00:00,  5.16it/s, acc=11.8, loss=0.93]
+Epoch 9 [Val] Loss: 3.6187 | Acc: 9.57%
+Ep 9| LR: 7.20e-05 | Train Loss: 3.4854 | Train Acc: 11.80% | Val Acc: 9.57%
+Epoch 10/200 [Train]: 100%|████████████████| 118/118 [00:22<00:00,  5.15it/s, acc=12, loss=0.813]
+Epoch 10 [Val] Loss: 3.4153 | Acc: 11.49%
+Ep 10| LR: 8.00e-05 | Train Loss: 3.4322 | Train Acc: 12.01% | Val Acc: 11.49%
+----> Saved Best Model: 11.49%
+Epoch 11/200 [Train]: 100%|████████████████| 118/118 [00:22<00:00,  5.17it/s, acc=13.5, loss=0.9]
+Epoch 11 [Val] Loss: 3.3267 | Acc: 11.70%
+Ep 11| LR: 8.80e-05 | Train Loss: 3.3594 | Train Acc: 13.50% | Val Acc: 11.70%
+----> Saved Best Model: 11.70%
+Epoch 12/200 [Train]: 100%|████████████████| 118/118 [00:22<00:00,  5.15it/s, acc=14, loss=0.882]
+Epoch 12 [Val] Loss: 3.4396 | Acc: 9.79%
+Ep 12| LR: 9.60e-05 | Train Loss: 3.2821 | Train Acc: 14.03% | Val Acc: 9.79%
+Epoch 13/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.15it/s, acc=18.2, loss=0.738]
+Epoch 13 [Val] Loss: 3.0659 | Acc: 18.51%
+Ep 13| LR: 1.04e-04 | Train Loss: 3.1685 | Train Acc: 18.17% | Val Acc: 18.51%
+----> Saved Best Model: 18.51%
+Epoch 14/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.15it/s, acc=19.3, loss=0.773]
+Epoch 14 [Val] Loss: 3.0759 | Acc: 16.81%
+Ep 14| LR: 1.12e-04 | Train Loss: 3.0736 | Train Acc: 19.34% | Val Acc: 16.81%
+Epoch 15/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.15it/s, acc=23.3, loss=0.959]
+Epoch 15 [Val] Loss: 2.8460 | Acc: 28.09%
+Ep 15| LR: 1.20e-04 | Train Loss: 2.9993 | Train Acc: 23.27% | Val Acc: 28.09%
+----> Saved Best Model: 28.09%
+Epoch 16/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.15it/s, acc=25.5, loss=0.839]
+Epoch 16 [Val] Loss: 2.9079 | Acc: 23.83%
+Ep 16| LR: 1.28e-04 | Train Loss: 2.9040 | Train Acc: 25.45% | Val Acc: 23.83%
+Epoch 17/200 [Train]: 100%|███████████████| 118/118 [00:22<00:00,  5.15it/s, acc=28.1, loss=0.58]
+Epoch 17 [Val] Loss: 2.8219 | Acc: 26.60%
+Ep 17| LR: 1.36e-04 | Train Loss: 2.8248 | Train Acc: 28.06% | Val Acc: 26.60%
+Epoch 18/200 [Train]: 100%|███████████████| 118/118 [00:22<00:00,  5.15it/s, acc=30.3, loss=0.63]
+Epoch 18 [Val] Loss: 2.7172 | Acc: 31.06%
+Ep 18| LR: 1.44e-04 | Train Loss: 2.7391 | Train Acc: 30.29% | Val Acc: 31.06%
+----> Saved Best Model: 31.06%
+Epoch 19/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=33.3, loss=0.628]
+Epoch 19 [Val] Loss: 2.6382 | Acc: 32.77%
+Ep 19| LR: 1.52e-04 | Train Loss: 2.6374 | Train Acc: 33.32% | Val Acc: 32.77%
+----> Saved Best Model: 32.77%
+Epoch 20/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  4.96it/s, acc=33.2, loss=0.673]
+Epoch 20 [Val] Loss: 2.6167 | Acc: 32.77%
+Ep 20| LR: 1.60e-04 | Train Loss: 2.5839 | Train Acc: 33.16% | Val Acc: 32.77%
+Epoch 21/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  4.95it/s, acc=36.4, loss=0.506]
+Epoch 21 [Val] Loss: 2.5024 | Acc: 34.26%
+Ep 21| LR: 1.68e-04 | Train Loss: 2.5193 | Train Acc: 36.40% | Val Acc: 34.26%
+----> Saved Best Model: 34.26%
+Epoch 22/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=39.8, loss=0.659]
+Epoch 22 [Val] Loss: 2.3877 | Acc: 38.30%
+Ep 22| LR: 1.76e-04 | Train Loss: 2.4370 | Train Acc: 39.80% | Val Acc: 38.30%
+----> Saved Best Model: 38.30%
+Epoch 23/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=41.2, loss=0.661]
+Epoch 23 [Val] Loss: 2.4133 | Acc: 39.57%
+Ep 23| LR: 1.84e-04 | Train Loss: 2.3586 | Train Acc: 41.23% | Val Acc: 39.57%
+----> Saved Best Model: 39.57%
+Epoch 24/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=42.9, loss=0.652]
+Epoch 24 [Val] Loss: 2.3594 | Acc: 39.57%
+Ep 24| LR: 1.92e-04 | Train Loss: 2.3127 | Train Acc: 42.88% | Val Acc: 39.57%
+Epoch 25/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.13it/s, acc=45.5, loss=0.514]
+Epoch 25 [Val] Loss: 2.4338 | Acc: 39.15%
+Ep 25| LR: 2.00e-04 | Train Loss: 2.2440 | Train Acc: 45.54% | Val Acc: 39.15%
+Epoch 26/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=45.6, loss=0.633]
+Epoch 26 [Val] Loss: 2.2750 | Acc: 45.11%
+Ep 26| LR: 2.00e-04 | Train Loss: 2.2363 | Train Acc: 45.64% | Val Acc: 45.11%
+----> Saved Best Model: 45.11%
+Epoch 27/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=50.9, loss=0.634]
+Epoch 27 [Val] Loss: 2.1332 | Acc: 48.94%
+Ep 27| LR: 2.00e-04 | Train Loss: 2.1473 | Train Acc: 50.85% | Val Acc: 48.94%
+----> Saved Best Model: 48.94%
+Epoch 28/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.00it/s, acc=50.9, loss=0.572]
+Epoch 28 [Val] Loss: 2.2643 | Acc: 41.70%
+Ep 28| LR: 2.00e-04 | Train Loss: 2.1061 | Train Acc: 50.85% | Val Acc: 41.70%
+Epoch 29/200 [Train]: 100%|██████████████| 118/118 [00:24<00:00,  4.84it/s, acc=52.9, loss=0.472]
+Epoch 29 [Val] Loss: 2.1358 | Acc: 43.62%
+Ep 29| LR: 2.00e-04 | Train Loss: 2.0251 | Train Acc: 52.87% | Val Acc: 43.62%
+Epoch 30/200 [Train]: 100%|████████████████| 118/118 [00:23<00:00,  5.06it/s, acc=56, loss=0.565]
+Epoch 30 [Val] Loss: 2.0415 | Acc: 55.53%
+Ep 30| LR: 2.00e-04 | Train Loss: 1.9767 | Train Acc: 56.00% | Val Acc: 55.53%
+----> Saved Best Model: 55.53%
+Epoch 31/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  4.99it/s, acc=56.7, loss=0.449]
+Epoch 31 [Val] Loss: 2.0535 | Acc: 51.91%
+Ep 31| LR: 1.99e-04 | Train Loss: 1.9488 | Train Acc: 56.70% | Val Acc: 51.91%
+Epoch 32/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.12it/s, acc=58.2, loss=0.399]
+Epoch 32 [Val] Loss: 1.9944 | Acc: 53.19%
+Ep 32| LR: 1.99e-04 | Train Loss: 1.9303 | Train Acc: 58.18% | Val Acc: 53.19%
+Epoch 33/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.12it/s, acc=61.9, loss=0.436]
+Epoch 33 [Val] Loss: 2.0417 | Acc: 51.91%
+Ep 33| LR: 1.99e-04 | Train Loss: 1.8482 | Train Acc: 61.90% | Val Acc: 51.91%
+Epoch 34/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.11it/s, acc=63.2, loss=0.389]
+Epoch 34 [Val] Loss: 1.9160 | Acc: 54.47%
+Ep 34| LR: 1.99e-04 | Train Loss: 1.7968 | Train Acc: 63.23% | Val Acc: 54.47%
+Epoch 35/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.11it/s, acc=63.6, loss=0.468]
+Epoch 35 [Val] Loss: 2.1526 | Acc: 49.79%
+Ep 35| LR: 1.98e-04 | Train Loss: 1.7796 | Train Acc: 63.60% | Val Acc: 49.79%
+Epoch 36/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.11it/s, acc=65.6, loss=0.533]
+Epoch 36 [Val] Loss: 1.9078 | Acc: 59.36%
+Ep 36| LR: 1.98e-04 | Train Loss: 1.7366 | Train Acc: 65.62% | Val Acc: 59.36%
+----> Saved Best Model: 59.36%
+Epoch 37/200 [Train]: 100%|███████████████| 118/118 [00:23<00:00,  5.11it/s, acc=67.8, loss=0.44]
+Epoch 37 [Val] Loss: 1.9017 | Acc: 58.51%
+Ep 37| LR: 1.98e-04 | Train Loss: 1.7032 | Train Acc: 67.80% | Val Acc: 58.51%
+Epoch 38/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.11it/s, acc=67.4, loss=0.381]
+Epoch 38 [Val] Loss: 1.9350 | Acc: 55.96%
+Ep 38| LR: 1.97e-04 | Train Loss: 1.6806 | Train Acc: 67.38% | Val Acc: 55.96%
+Epoch 39/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.11it/s, acc=70.6, loss=0.372]
+Epoch 39 [Val] Loss: 1.8131 | Acc: 58.72%
+Ep 39| LR: 1.97e-04 | Train Loss: 1.6532 | Train Acc: 70.56% | Val Acc: 58.72%
+Epoch 40/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.11it/s, acc=70.8, loss=0.353]
+Epoch 40 [Val] Loss: 1.8580 | Acc: 57.66%
+Ep 40| LR: 1.96e-04 | Train Loss: 1.6093 | Train Acc: 70.78% | Val Acc: 57.66%
+Epoch 41/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.11it/s, acc=72.6, loss=0.415]
+Epoch 41 [Val] Loss: 1.7913 | Acc: 61.06%
+Ep 41| LR: 1.96e-04 | Train Loss: 1.5701 | Train Acc: 72.64% | Val Acc: 61.06%
+----> Saved Best Model: 61.06%
+Epoch 42/200 [Train]: 100%|████████████████| 118/118 [00:23<00:00,  5.11it/s, acc=73, loss=0.355]
+Epoch 42 [Val] Loss: 1.6879 | Acc: 66.17%
+Ep 42| LR: 1.95e-04 | Train Loss: 1.5428 | Train Acc: 72.95% | Val Acc: 66.17%
+----> Saved Best Model: 66.17%
+Epoch 43/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.11it/s, acc=73.5, loss=0.307]
+Epoch 43 [Val] Loss: 1.7836 | Acc: 60.64%
+Ep 43| LR: 1.95e-04 | Train Loss: 1.5378 | Train Acc: 73.49% | Val Acc: 60.64%
+Epoch 44/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.10it/s, acc=74.3, loss=0.411]
+Epoch 44 [Val] Loss: 1.7942 | Acc: 62.98%
+Ep 44| LR: 1.94e-04 | Train Loss: 1.5153 | Train Acc: 74.28% | Val Acc: 62.98%
+Epoch 45/200 [Train]: 100%|████████████████| 118/118 [00:23<00:00,  5.00it/s, acc=76, loss=0.331]
+Epoch 45 [Val] Loss: 1.6472 | Acc: 67.02%
+Ep 45| LR: 1.94e-04 | Train Loss: 1.4653 | Train Acc: 75.98% | Val Acc: 67.02%
+----> Saved Best Model: 67.02%
+Epoch 46/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.09it/s, acc=75.3, loss=0.476]
+Epoch 46 [Val] Loss: 1.6197 | Acc: 69.36%
+Ep 46| LR: 1.93e-04 | Train Loss: 1.4696 | Train Acc: 75.29% | Val Acc: 69.36%
+----> Saved Best Model: 69.36%
+Epoch 47/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.13it/s, acc=77.3, loss=0.339]
+Epoch 47 [Val] Loss: 1.6159 | Acc: 66.38%
+Ep 47| LR: 1.92e-04 | Train Loss: 1.4475 | Train Acc: 77.31% | Val Acc: 66.38%
+Epoch 48/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=77.2, loss=0.353]
+Epoch 48 [Val] Loss: 1.5833 | Acc: 68.94%
+Ep 48| LR: 1.92e-04 | Train Loss: 1.4445 | Train Acc: 77.15% | Val Acc: 68.94%
+Epoch 49/200 [Train]: 100%|████████████████| 118/118 [00:22<00:00,  5.13it/s, acc=79, loss=0.307]
+Epoch 49 [Val] Loss: 1.6910 | Acc: 67.23%
+Ep 49| LR: 1.91e-04 | Train Loss: 1.4039 | Train Acc: 79.01% | Val Acc: 67.23%
+Epoch 50/200 [Train]: 100%|████████████████| 118/118 [00:23<00:00,  5.12it/s, acc=81.1, loss=0.4]
+Epoch 50 [Val] Loss: 1.6269 | Acc: 67.02%
+Ep 50| LR: 1.90e-04 | Train Loss: 1.3782 | Train Acc: 81.08% | Val Acc: 67.02%
+Epoch 51/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.13it/s, acc=81.3, loss=0.347]
+Epoch 51 [Val] Loss: 1.5525 | Acc: 72.34%
+Ep 51| LR: 1.89e-04 | Train Loss: 1.3615 | Train Acc: 81.35% | Val Acc: 72.34%
+----> Saved Best Model: 72.34%
+Epoch 52/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.13it/s, acc=81.5, loss=0.294]
+Epoch 52 [Val] Loss: 1.5472 | Acc: 71.91%
+Ep 52| LR: 1.88e-04 | Train Loss: 1.3297 | Train Acc: 81.46% | Val Acc: 71.91%
+Epoch 53/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.13it/s, acc=82.4, loss=0.358]
+Epoch 53 [Val] Loss: 1.5427 | Acc: 72.13%
+Ep 53| LR: 1.88e-04 | Train Loss: 1.3154 | Train Acc: 82.36% | Val Acc: 72.13%
+Epoch 54/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.12it/s, acc=83.2, loss=0.321]
+Epoch 54 [Val] Loss: 1.4763 | Acc: 73.62%
+Ep 54| LR: 1.87e-04 | Train Loss: 1.3016 | Train Acc: 83.21% | Val Acc: 73.62%
+----> Saved Best Model: 73.62%
+Epoch 55/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.12it/s, acc=84.9, loss=0.298]
+Epoch 55 [Val] Loss: 1.5244 | Acc: 71.28%
+Ep 55| LR: 1.86e-04 | Train Loss: 1.2750 | Train Acc: 84.86% | Val Acc: 71.28%
+Epoch 56/200 [Train]: 100%|████████████████| 118/118 [00:22<00:00,  5.13it/s, acc=86, loss=0.326]
+Epoch 56 [Val] Loss: 1.5009 | Acc: 72.13%
+Ep 56| LR: 1.85e-04 | Train Loss: 1.2598 | Train Acc: 85.97% | Val Acc: 72.13%
+Epoch 57/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.13it/s, acc=85.7, loss=0.389]
+Epoch 57 [Val] Loss: 1.4870 | Acc: 72.55%
+Ep 57| LR: 1.84e-04 | Train Loss: 1.2474 | Train Acc: 85.71% | Val Acc: 72.55%
+Epoch 58/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.13it/s, acc=87.1, loss=0.315]
+Epoch 58 [Val] Loss: 1.4627 | Acc: 76.60%
+Ep 58| LR: 1.83e-04 | Train Loss: 1.2218 | Train Acc: 87.14% | Val Acc: 76.60%
+----> Saved Best Model: 76.60%
+Epoch 59/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.13it/s, acc=86.9, loss=0.347]
+Epoch 59 [Val] Loss: 1.3977 | Acc: 77.45%
+Ep 59| LR: 1.82e-04 | Train Loss: 1.2246 | Train Acc: 86.93% | Val Acc: 77.45%
+----> Saved Best Model: 77.45%
+Epoch 60/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.12it/s, acc=87.9, loss=0.367]
+Epoch 60 [Val] Loss: 1.4356 | Acc: 74.68%
+Ep 60| LR: 1.81e-04 | Train Loss: 1.2095 | Train Acc: 87.94% | Val Acc: 74.68%
+Epoch 61/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.13it/s, acc=88.7, loss=0.301]
+Epoch 61 [Val] Loss: 1.4927 | Acc: 73.83%
+Ep 61| LR: 1.80e-04 | Train Loss: 1.1954 | Train Acc: 88.74% | Val Acc: 73.83%
+Epoch 62/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.12it/s, acc=88.5, loss=0.311]
+Epoch 62 [Val] Loss: 1.4695 | Acc: 72.98%
+Ep 62| LR: 1.79e-04 | Train Loss: 1.1839 | Train Acc: 88.47% | Val Acc: 72.98%
+Epoch 63/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.13it/s, acc=88.9, loss=0.308]
+Epoch 63 [Val] Loss: 1.4289 | Acc: 74.04%
+Ep 63| LR: 1.78e-04 | Train Loss: 1.1781 | Train Acc: 88.89% | Val Acc: 74.04%
+Epoch 64/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.02it/s, acc=89.1, loss=0.272]
+Epoch 64 [Val] Loss: 1.4687 | Acc: 73.83%
+Ep 64| LR: 1.76e-04 | Train Loss: 1.1486 | Train Acc: 89.05% | Val Acc: 73.83%
+Epoch 65/200 [Train]: 100%|██████████████| 118/118 [00:24<00:00,  4.81it/s, acc=89.6, loss=0.296]
+Epoch 65 [Val] Loss: 1.4285 | Acc: 78.51%
+Ep 65| LR: 1.75e-04 | Train Loss: 1.1478 | Train Acc: 89.64% | Val Acc: 78.51%
+----> Saved Best Model: 78.51%
+Epoch 66/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.02it/s, acc=90.9, loss=0.333]
+Epoch 66 [Val] Loss: 1.3679 | Acc: 82.77%
+Ep 66| LR: 1.74e-04 | Train Loss: 1.1215 | Train Acc: 90.86% | Val Acc: 82.77%
+----> Saved Best Model: 82.77%
+Epoch 67/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=91.8, loss=0.273]
+Epoch 67 [Val] Loss: 1.4692 | Acc: 76.38%
+Ep 67| LR: 1.73e-04 | Train Loss: 1.1127 | Train Acc: 91.82% | Val Acc: 76.38%
+Epoch 68/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.13it/s, acc=91.3, loss=0.359]
+Epoch 68 [Val] Loss: 1.3324 | Acc: 81.70%
+Ep 68| LR: 1.72e-04 | Train Loss: 1.1118 | Train Acc: 91.34% | Val Acc: 81.70%
+Epoch 69/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.13it/s, acc=91.9, loss=0.265]
+Epoch 69 [Val] Loss: 1.3789 | Acc: 78.51%
+Ep 69| LR: 1.70e-04 | Train Loss: 1.0985 | Train Acc: 91.92% | Val Acc: 78.51%
+Epoch 70/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=90.3, loss=0.328]
+Epoch 70 [Val] Loss: 1.3224 | Acc: 80.85%
+Ep 70| LR: 1.69e-04 | Train Loss: 1.1148 | Train Acc: 90.28% | Val Acc: 80.85%
+Epoch 71/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.13it/s, acc=91.1, loss=0.287]
+Epoch 71 [Val] Loss: 1.3564 | Acc: 79.15%
+Ep 71| LR: 1.68e-04 | Train Loss: 1.1001 | Train Acc: 91.13% | Val Acc: 79.15%
+Epoch 72/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=92.7, loss=0.233]
+Epoch 72 [Val] Loss: 1.3644 | Acc: 79.36%
+Ep 72| LR: 1.66e-04 | Train Loss: 1.0692 | Train Acc: 92.72% | Val Acc: 79.36%
+Epoch 73/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.13it/s, acc=92.2, loss=0.329]
+Epoch 73 [Val] Loss: 1.3284 | Acc: 82.98%
+Ep 73| LR: 1.65e-04 | Train Loss: 1.0760 | Train Acc: 92.19% | Val Acc: 82.98%
+----> Saved Best Model: 82.98%
+Epoch 74/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=93.7, loss=0.285]
+Epoch 74 [Val] Loss: 1.2896 | Acc: 81.06%
+Ep 74| LR: 1.64e-04 | Train Loss: 1.0533 | Train Acc: 93.73% | Val Acc: 81.06%
+Epoch 75/200 [Train]: 100%|███████████████| 118/118 [00:22<00:00,  5.14it/s, acc=93.3, loss=0.22]
+Epoch 75 [Val] Loss: 1.3569 | Acc: 81.06%
+Ep 75| LR: 1.62e-04 | Train Loss: 1.0478 | Train Acc: 93.30% | Val Acc: 81.06%
+Epoch 76/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.13it/s, acc=93.6, loss=0.275]
+Epoch 76 [Val] Loss: 1.3072 | Acc: 81.70%
+Ep 76| LR: 1.61e-04 | Train Loss: 1.0416 | Train Acc: 93.57% | Val Acc: 81.70%
+Epoch 77/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.13it/s, acc=94.3, loss=0.347]
+Epoch 77 [Val] Loss: 1.2709 | Acc: 82.34%
+Ep 77| LR: 1.60e-04 | Train Loss: 1.0268 | Train Acc: 94.31% | Val Acc: 82.34%
+Epoch 78/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=93.3, loss=0.328]
+Epoch 78 [Val] Loss: 1.3005 | Acc: 82.98%
+Ep 78| LR: 1.58e-04 | Train Loss: 1.0402 | Train Acc: 93.30% | Val Acc: 82.98%
+Epoch 79/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=93.7, loss=0.259]
+Epoch 79 [Val] Loss: 1.2761 | Acc: 83.19%
+Ep 79| LR: 1.57e-04 | Train Loss: 1.0330 | Train Acc: 93.73% | Val Acc: 83.19%
+----> Saved Best Model: 83.19%
+Epoch 80/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=94.5, loss=0.284]
+Epoch 80 [Val] Loss: 1.2707 | Acc: 83.62%
+Ep 80| LR: 1.55e-04 | Train Loss: 1.0183 | Train Acc: 94.47% | Val Acc: 83.62%
+----> Saved Best Model: 83.62%
+Epoch 81/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.15it/s, acc=94.5, loss=0.254]
+Epoch 81 [Val] Loss: 1.3174 | Acc: 81.28%
+Ep 81| LR: 1.54e-04 | Train Loss: 1.0080 | Train Acc: 94.47% | Val Acc: 81.28%
+Epoch 82/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.13it/s, acc=94.9, loss=0.247]
+Epoch 82 [Val] Loss: 1.2670 | Acc: 83.19%
+Ep 82| LR: 1.52e-04 | Train Loss: 0.9956 | Train Acc: 94.90% | Val Acc: 83.19%
+Epoch 83/200 [Train]: 100%|███████████████| 118/118 [00:23<00:00,  5.13it/s, acc=94.4, loss=0.25]
+Epoch 83 [Val] Loss: 1.3081 | Acc: 82.13%
+Ep 83| LR: 1.51e-04 | Train Loss: 1.0147 | Train Acc: 94.42% | Val Acc: 82.13%
+Epoch 84/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.13it/s, acc=94.8, loss=0.221]
+Epoch 84 [Val] Loss: 1.2387 | Acc: 83.83%
+Ep 84| LR: 1.49e-04 | Train Loss: 0.9978 | Train Acc: 94.85% | Val Acc: 83.83%
+----> Saved Best Model: 83.83%
+Epoch 85/200 [Train]: 100%|███████████████| 118/118 [00:22<00:00,  5.14it/s, acc=95.4, loss=0.26]
+Epoch 85 [Val] Loss: 1.2708 | Acc: 82.77%
+Ep 85| LR: 1.47e-04 | Train Loss: 0.9909 | Train Acc: 95.38% | Val Acc: 82.77%
+Epoch 86/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=96.5, loss=0.344]
+Epoch 86 [Val] Loss: 1.2497 | Acc: 83.62%
+Ep 86| LR: 1.46e-04 | Train Loss: 0.9713 | Train Acc: 96.49% | Val Acc: 83.62%
+Epoch 87/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.13it/s, acc=95.5, loss=0.239]
+Epoch 87 [Val] Loss: 1.2434 | Acc: 84.47%
+Ep 87| LR: 1.44e-04 | Train Loss: 0.9793 | Train Acc: 95.54% | Val Acc: 84.47%
+----> Saved Best Model: 84.47%
+Epoch 88/200 [Train]: 100%|████████████████| 118/118 [00:23<00:00,  5.13it/s, acc=96, loss=0.222]
+Epoch 88 [Val] Loss: 1.2535 | Acc: 83.62%
+Ep 88| LR: 1.43e-04 | Train Loss: 0.9624 | Train Acc: 96.01% | Val Acc: 83.62%
+Epoch 89/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.13it/s, acc=95.6, loss=0.276]
+Epoch 89 [Val] Loss: 1.2062 | Acc: 85.53%
+Ep 89| LR: 1.41e-04 | Train Loss: 0.9763 | Train Acc: 95.59% | Val Acc: 85.53%
+----> Saved Best Model: 85.53%
+Epoch 90/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.13it/s, acc=96.5, loss=0.256]
+Epoch 90 [Val] Loss: 1.2408 | Acc: 83.62%
+Ep 90| LR: 1.39e-04 | Train Loss: 0.9567 | Train Acc: 96.49% | Val Acc: 83.62%
+Epoch 91/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.13it/s, acc=96.4, loss=0.218]
+Epoch 91 [Val] Loss: 1.2240 | Acc: 84.89%
+Ep 91| LR: 1.38e-04 | Train Loss: 0.9558 | Train Acc: 96.39% | Val Acc: 84.89%
+Epoch 92/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=96.2, loss=0.226]
+Epoch 92 [Val] Loss: 1.1910 | Acc: 86.81%
+Ep 92| LR: 1.36e-04 | Train Loss: 0.9475 | Train Acc: 96.23% | Val Acc: 86.81%
+----> Saved Best Model: 86.81%
+Epoch 93/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.13it/s, acc=97.1, loss=0.289]
+Epoch 93 [Val] Loss: 1.1986 | Acc: 84.26%
+Ep 93| LR: 1.34e-04 | Train Loss: 0.9415 | Train Acc: 97.13% | Val Acc: 84.26%
+Epoch 94/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.13it/s, acc=97.1, loss=0.245]
+Epoch 94 [Val] Loss: 1.1978 | Acc: 85.11%
+Ep 94| LR: 1.33e-04 | Train Loss: 0.9423 | Train Acc: 97.08% | Val Acc: 85.11%
+Epoch 95/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=97.1, loss=0.219]
+Epoch 95 [Val] Loss: 1.1874 | Acc: 86.81%
+Ep 95| LR: 1.31e-04 | Train Loss: 0.9342 | Train Acc: 97.08% | Val Acc: 86.81%
+Epoch 96/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.12it/s, acc=96.8, loss=0.264]
+Epoch 96 [Val] Loss: 1.1800 | Acc: 86.81%
+Ep 96| LR: 1.29e-04 | Train Loss: 0.9419 | Train Acc: 96.81% | Val Acc: 86.81%
+Epoch 97/200 [Train]: 100%|███████████████| 118/118 [00:23<00:00,  5.12it/s, acc=97.1, loss=0.21]
+Epoch 97 [Val] Loss: 1.1978 | Acc: 85.32%
+Ep 97| LR: 1.27e-04 | Train Loss: 0.9278 | Train Acc: 97.13% | Val Acc: 85.32%
+Epoch 98/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=97.1, loss=0.231]
+Epoch 98 [Val] Loss: 1.1539 | Acc: 87.66%
+Ep 98| LR: 1.26e-04 | Train Loss: 0.9190 | Train Acc: 97.13% | Val Acc: 87.66%
+----> Saved Best Model: 87.66%
+Epoch 99/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.13it/s, acc=97.9, loss=0.204]
+Epoch 99 [Val] Loss: 1.1856 | Acc: 86.60%
+Ep 99| LR: 1.24e-04 | Train Loss: 0.9143 | Train Acc: 97.93% | Val Acc: 86.60%
+Epoch 100/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=97.3, loss=0.218]
+Epoch 100 [Val] Loss: 1.1970 | Acc: 84.68%
+Ep 100| LR: 1.22e-04 | Train Loss: 0.9204 | Train Acc: 97.29% | Val Acc: 84.68%
+Epoch 101/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=97.1, loss=0.281]
+Epoch 101 [Val] Loss: 1.1857 | Acc: 86.60%
+Ep 101| LR: 1.20e-04 | Train Loss: 0.9285 | Train Acc: 97.13% | Val Acc: 86.60%
+Epoch 102/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=97.6, loss=0.247]
+Epoch 102 [Val] Loss: 1.1556 | Acc: 87.02%
+Ep 102| LR: 1.19e-04 | Train Loss: 0.9134 | Train Acc: 97.61% | Val Acc: 87.02%
+Epoch 103/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=97.7, loss=0.245]
+Epoch 103 [Val] Loss: 1.1714 | Acc: 87.45%
+Ep 103| LR: 1.17e-04 | Train Loss: 0.9083 | Train Acc: 97.72% | Val Acc: 87.45%
+Epoch 104/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=97.9, loss=0.248]
+Epoch 104 [Val] Loss: 1.1808 | Acc: 87.45%
+Ep 104| LR: 1.15e-04 | Train Loss: 0.9020 | Train Acc: 97.87% | Val Acc: 87.45%
+Epoch 105/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=98.1, loss=0.204]
+Epoch 105 [Val] Loss: 1.1718 | Acc: 85.53%
+Ep 105| LR: 1.13e-04 | Train Loss: 0.8992 | Train Acc: 98.09% | Val Acc: 85.53%
+Epoch 106/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=98.5, loss=0.235]
+Epoch 106 [Val] Loss: 1.1683 | Acc: 85.74%
+Ep 106| LR: 1.12e-04 | Train Loss: 0.8797 | Train Acc: 98.46% | Val Acc: 85.74%
+Epoch 107/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=98.4, loss=0.232]
+Epoch 107 [Val] Loss: 1.1766 | Acc: 86.38%
+Ep 107| LR: 1.10e-04 | Train Loss: 0.8920 | Train Acc: 98.41% | Val Acc: 86.38%
+Epoch 108/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=98.5, loss=0.217]
+Epoch 108 [Val] Loss: 1.1428 | Acc: 87.66%
+Ep 108| LR: 1.08e-04 | Train Loss: 0.8877 | Train Acc: 98.51% | Val Acc: 87.66%
+Epoch 109/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=98.5, loss=0.204]
+Epoch 109 [Val] Loss: 1.1575 | Acc: 87.23%
+Ep 109| LR: 1.06e-04 | Train Loss: 0.8782 | Train Acc: 98.51% | Val Acc: 87.23%
+Epoch 110/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=98.7, loss=0.202]
+Epoch 110 [Val] Loss: 1.1698 | Acc: 87.87%
+Ep 110| LR: 1.04e-04 | Train Loss: 0.8765 | Train Acc: 98.72% | Val Acc: 87.87%
+----> Saved Best Model: 87.87%
+Epoch 111/200 [Train]: 100%|███████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99, loss=0.264]
+Epoch 111 [Val] Loss: 1.1269 | Acc: 86.17%
+Ep 111| LR: 1.03e-04 | Train Loss: 0.8710 | Train Acc: 99.04% | Val Acc: 86.17%
+Epoch 112/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=98.7, loss=0.255]
+Epoch 112 [Val] Loss: 1.1296 | Acc: 89.15%
+Ep 112| LR: 1.01e-04 | Train Loss: 0.8659 | Train Acc: 98.72% | Val Acc: 89.15%
+----> Saved Best Model: 89.15%
+Epoch 113/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=98.8, loss=0.209]
+Epoch 113 [Val] Loss: 1.1296 | Acc: 88.30%
+Ep 113| LR: 9.91e-05 | Train Loss: 0.8616 | Train Acc: 98.83% | Val Acc: 88.30%
+Epoch 114/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=98.6, loss=0.231]
+Epoch 114 [Val] Loss: 1.1378 | Acc: 87.45%
+Ep 114| LR: 9.73e-05 | Train Loss: 0.8734 | Train Acc: 98.62% | Val Acc: 87.45%
+Epoch 115/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.14it/s, acc=98.9, loss=0.22]
+Epoch 115 [Val] Loss: 1.1400 | Acc: 87.45%
+Ep 115| LR: 9.55e-05 | Train Loss: 0.8612 | Train Acc: 98.94% | Val Acc: 87.45%
+Epoch 116/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=98.6, loss=0.236]
+Epoch 116 [Val] Loss: 1.1265 | Acc: 87.45%
+Ep 116| LR: 9.37e-05 | Train Loss: 0.8606 | Train Acc: 98.62% | Val Acc: 87.45%
+Epoch 117/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=98.5, loss=0.205]
+Epoch 117 [Val] Loss: 1.1370 | Acc: 88.51%
+Ep 117| LR: 9.19e-05 | Train Loss: 0.8596 | Train Acc: 98.51% | Val Acc: 88.51%
+Epoch 118/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=98.9, loss=0.206]
+Epoch 118 [Val] Loss: 1.1167 | Acc: 88.30%
+Ep 118| LR: 9.01e-05 | Train Loss: 0.8554 | Train Acc: 98.94% | Val Acc: 88.30%
+Epoch 119/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=98.9, loss=0.197]
+Epoch 119 [Val] Loss: 1.1231 | Acc: 89.15%
+Ep 119| LR: 8.84e-05 | Train Loss: 0.8560 | Train Acc: 98.94% | Val Acc: 89.15%
+Epoch 120/200 [Train]: 100%|███████████████| 118/118 [00:22<00:00,  5.14it/s, acc=99, loss=0.198]
+Epoch 120 [Val] Loss: 1.1130 | Acc: 88.51%
+Ep 120| LR: 8.66e-05 | Train Loss: 0.8441 | Train Acc: 99.04% | Val Acc: 88.51%
+Epoch 121/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=98.9, loss=0.203]
+Epoch 121 [Val] Loss: 1.1088 | Acc: 88.51%
+Ep 121| LR: 8.48e-05 | Train Loss: 0.8508 | Train Acc: 98.88% | Val Acc: 88.51%
+Epoch 122/200 [Train]: 100%|███████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99, loss=0.229]
+Epoch 122 [Val] Loss: 1.1057 | Acc: 89.79%
+Ep 122| LR: 8.30e-05 | Train Loss: 0.8478 | Train Acc: 98.99% | Val Acc: 89.79%
+----> Saved Best Model: 89.79%
+Epoch 123/200 [Train]: 100%|███████████████| 118/118 [00:22<00:00,  5.14it/s, acc=99, loss=0.251]
+Epoch 123 [Val] Loss: 1.1235 | Acc: 87.66%
+Ep 123| LR: 8.13e-05 | Train Loss: 0.8439 | Train Acc: 98.99% | Val Acc: 87.66%
+Epoch 124/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=98.8, loss=0.207]
+Epoch 124 [Val] Loss: 1.0971 | Acc: 89.36%
+Ep 124| LR: 7.95e-05 | Train Loss: 0.8517 | Train Acc: 98.83% | Val Acc: 89.36%
+Epoch 125/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.05it/s, acc=98.6, loss=0.207]
+Epoch 125 [Val] Loss: 1.1170 | Acc: 88.30%
+Ep 125| LR: 7.77e-05 | Train Loss: 0.8432 | Train Acc: 98.62% | Val Acc: 88.30%
+Epoch 126/200 [Train]: 100%|████████████████| 118/118 [00:22<00:00,  5.14it/s, acc=99, loss=0.22]
+Epoch 126 [Val] Loss: 1.1048 | Acc: 89.57%
+Ep 126| LR: 7.60e-05 | Train Loss: 0.8426 | Train Acc: 98.99% | Val Acc: 89.57%
+Epoch 127/200 [Train]: 100%|███████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99, loss=0.241]
+Epoch 127 [Val] Loss: 1.1305 | Acc: 88.09%
+Ep 127| LR: 7.43e-05 | Train Loss: 0.8399 | Train Acc: 98.99% | Val Acc: 88.09%
+Epoch 128/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=98.8, loss=0.209]
+Epoch 128 [Val] Loss: 1.0861 | Acc: 90.43%
+Ep 128| LR: 7.25e-05 | Train Loss: 0.8394 | Train Acc: 98.83% | Val Acc: 90.43%
+----> Saved Best Model: 90.43%
+Epoch 129/200 [Train]: 100%|████████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99, loss=0.22]
+Epoch 129 [Val] Loss: 1.1301 | Acc: 88.09%
+Ep 129| LR: 7.08e-05 | Train Loss: 0.8392 | Train Acc: 99.04% | Val Acc: 88.09%
+Epoch 130/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.2, loss=0.221]
+Epoch 130 [Val] Loss: 1.0930 | Acc: 89.79%
+Ep 130| LR: 6.91e-05 | Train Loss: 0.8337 | Train Acc: 99.20% | Val Acc: 89.79%
+Epoch 131/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.12it/s, acc=99.2, loss=0.203]
+Epoch 131 [Val] Loss: 1.0897 | Acc: 89.15%
+Ep 131| LR: 6.74e-05 | Train Loss: 0.8301 | Train Acc: 99.20% | Val Acc: 89.15%
+Epoch 132/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.12it/s, acc=99.4, loss=0.197]
+Epoch 132 [Val] Loss: 1.0943 | Acc: 88.72%
+Ep 132| LR: 6.57e-05 | Train Loss: 0.8223 | Train Acc: 99.42% | Val Acc: 88.72%
+Epoch 133/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.2, loss=0.21]
+Epoch 133 [Val] Loss: 1.0927 | Acc: 90.00%
+Ep 133| LR: 6.40e-05 | Train Loss: 0.8318 | Train Acc: 99.20% | Val Acc: 90.00%
+Epoch 134/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=99.5, loss=0.222]
+Epoch 134 [Val] Loss: 1.1267 | Acc: 88.51%
+Ep 134| LR: 6.24e-05 | Train Loss: 0.8240 | Train Acc: 99.47% | Val Acc: 88.51%
+Epoch 135/200 [Train]: 100%|███████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99, loss=0.223]
+Epoch 135 [Val] Loss: 1.1040 | Acc: 88.51%
+Ep 135| LR: 6.07e-05 | Train Loss: 0.8292 | Train Acc: 98.99% | Val Acc: 88.51%
+Epoch 136/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.12it/s, acc=99.1, loss=0.216]
+Epoch 136 [Val] Loss: 1.1186 | Acc: 88.72%
+Ep 136| LR: 5.91e-05 | Train Loss: 0.8287 | Train Acc: 99.15% | Val Acc: 88.72%
+Epoch 137/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=99.6, loss=0.254]
+Epoch 137 [Val] Loss: 1.0757 | Acc: 90.85%
+Ep 137| LR: 5.74e-05 | Train Loss: 0.8183 | Train Acc: 99.57% | Val Acc: 90.85%
+----> Saved Best Model: 90.85%
+Epoch 138/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99.2, loss=0.204]
+Epoch 138 [Val] Loss: 1.0941 | Acc: 88.51%
+Ep 138| LR: 5.58e-05 | Train Loss: 0.8190 | Train Acc: 99.20% | Val Acc: 88.51%
+Epoch 139/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.5, loss=0.203]
+Epoch 139 [Val] Loss: 1.1002 | Acc: 88.94%
+Ep 139| LR: 5.42e-05 | Train Loss: 0.8197 | Train Acc: 99.52% | Val Acc: 88.94%
+Epoch 140/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=99.4, loss=0.212]
+Epoch 140 [Val] Loss: 1.0708 | Acc: 90.85%
+Ep 140| LR: 5.26e-05 | Train Loss: 0.8172 | Train Acc: 99.36% | Val Acc: 90.85%
+Epoch 141/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99.4, loss=0.199]
+Epoch 141 [Val] Loss: 1.0881 | Acc: 89.79%
+Ep 141| LR: 5.10e-05 | Train Loss: 0.8140 | Train Acc: 99.36% | Val Acc: 89.79%
+Epoch 142/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99.5, loss=0.201]
+Epoch 142 [Val] Loss: 1.0751 | Acc: 89.79%
+Ep 142| LR: 4.95e-05 | Train Loss: 0.8128 | Train Acc: 99.47% | Val Acc: 89.79%
+Epoch 143/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=99.5, loss=0.203]
+Epoch 143 [Val] Loss: 1.0905 | Acc: 89.36%
+Ep 143| LR: 4.79e-05 | Train Loss: 0.8098 | Train Acc: 99.52% | Val Acc: 89.36%
+Epoch 144/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.6, loss=0.198]
+Epoch 144 [Val] Loss: 1.0727 | Acc: 90.00%
+Ep 144| LR: 4.64e-05 | Train Loss: 0.8095 | Train Acc: 99.63% | Val Acc: 90.00%
+Epoch 145/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99.5, loss=0.236]
+Epoch 145 [Val] Loss: 1.0786 | Acc: 90.43%
+Ep 145| LR: 4.49e-05 | Train Loss: 0.8065 | Train Acc: 99.47% | Val Acc: 90.43%
+Epoch 146/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99.5, loss=0.241]
+Epoch 146 [Val] Loss: 1.0655 | Acc: 91.28%
+Ep 146| LR: 4.34e-05 | Train Loss: 0.8078 | Train Acc: 99.52% | Val Acc: 91.28%
+----> Saved Best Model: 91.28%
+Epoch 147/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.12it/s, acc=99.6, loss=0.199]
+Epoch 147 [Val] Loss: 1.0632 | Acc: 90.43%
+Ep 147| LR: 4.20e-05 | Train Loss: 0.8049 | Train Acc: 99.57% | Val Acc: 90.43%
+Epoch 148/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.7, loss=0.201]
+Epoch 148 [Val] Loss: 1.0728 | Acc: 90.43%
+Ep 148| LR: 4.05e-05 | Train Loss: 0.8029 | Train Acc: 99.73% | Val Acc: 90.43%
+Epoch 149/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.7, loss=0.245]
+Epoch 149 [Val] Loss: 1.0702 | Acc: 90.64%
+Ep 149| LR: 3.91e-05 | Train Loss: 0.8066 | Train Acc: 99.68% | Val Acc: 90.64%
+Epoch 150/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.6, loss=0.196]
+Epoch 150 [Val] Loss: 1.0663 | Acc: 90.43%
+Ep 150| LR: 3.77e-05 | Train Loss: 0.8003 | Train Acc: 99.63% | Val Acc: 90.43%
+Epoch 151/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.4, loss=0.211]
+Epoch 151 [Val] Loss: 1.0811 | Acc: 90.21%
+Ep 151| LR: 3.63e-05 | Train Loss: 0.8036 | Train Acc: 99.42% | Val Acc: 90.21%
+Epoch 152/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.6, loss=0.197]
+Epoch 152 [Val] Loss: 1.0682 | Acc: 89.79%
+Ep 152| LR: 3.49e-05 | Train Loss: 0.8004 | Train Acc: 99.63% | Val Acc: 89.79%
+Epoch 153/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99.7, loss=0.202]
+Epoch 153 [Val] Loss: 1.0784 | Acc: 89.15%
+Ep 153| LR: 3.35e-05 | Train Loss: 0.7999 | Train Acc: 99.68% | Val Acc: 89.15%
+Epoch 154/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99.8, loss=0.206]
+Epoch 154 [Val] Loss: 1.0704 | Acc: 90.21%
+Ep 154| LR: 3.22e-05 | Train Loss: 0.7994 | Train Acc: 99.79% | Val Acc: 90.21%
+Epoch 155/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.5, loss=0.222]
+Epoch 155 [Val] Loss: 1.0502 | Acc: 91.49%
+Ep 155| LR: 3.09e-05 | Train Loss: 0.8010 | Train Acc: 99.47% | Val Acc: 91.49%
+----> Saved Best Model: 91.49%
+Epoch 156/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.12it/s, acc=99.4, loss=0.215]
+Epoch 156 [Val] Loss: 1.0568 | Acc: 90.21%
+Ep 156| LR: 2.96e-05 | Train Loss: 0.8028 | Train Acc: 99.36% | Val Acc: 90.21%
+Epoch 157/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.7, loss=0.205]
+Epoch 157 [Val] Loss: 1.0681 | Acc: 90.00%
+Ep 157| LR: 2.83e-05 | Train Loss: 0.7947 | Train Acc: 99.73% | Val Acc: 90.00%
+Epoch 158/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.12it/s, acc=99.7, loss=0.198]
+Epoch 158 [Val] Loss: 1.0609 | Acc: 91.06%
+Ep 158| LR: 2.71e-05 | Train Loss: 0.7956 | Train Acc: 99.68% | Val Acc: 91.06%
+Epoch 159/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.7, loss=0.216]
+Epoch 159 [Val] Loss: 1.0575 | Acc: 90.21%
+Ep 159| LR: 2.59e-05 | Train Loss: 0.7954 | Train Acc: 99.68% | Val Acc: 90.21%
+Epoch 160/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.12it/s, acc=99.8, loss=0.192]
+Epoch 160 [Val] Loss: 1.0643 | Acc: 90.00%
+Ep 160| LR: 2.47e-05 | Train Loss: 0.7952 | Train Acc: 99.79% | Val Acc: 90.00%
+Epoch 161/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99.8, loss=0.232]
+Epoch 161 [Val] Loss: 1.0525 | Acc: 90.43%
+Ep 161| LR: 2.35e-05 | Train Loss: 0.7932 | Train Acc: 99.84% | Val Acc: 90.43%
+Epoch 162/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.6, loss=0.191]
+Epoch 162 [Val] Loss: 1.0558 | Acc: 90.64%
+Ep 162| LR: 2.24e-05 | Train Loss: 0.7921 | Train Acc: 99.57% | Val Acc: 90.64%
+Epoch 163/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.12it/s, acc=99.8, loss=0.195]
+Epoch 163 [Val] Loss: 1.0521 | Acc: 90.43%
+Ep 163| LR: 2.13e-05 | Train Loss: 0.7904 | Train Acc: 99.84% | Val Acc: 90.43%
+Epoch 164/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.7, loss=0.218]
+Epoch 164 [Val] Loss: 1.0532 | Acc: 91.28%
+Ep 164| LR: 2.02e-05 | Train Loss: 0.7939 | Train Acc: 99.68% | Val Acc: 91.28%
+Epoch 165/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.4, loss=0.203]
+Epoch 165 [Val] Loss: 1.0589 | Acc: 90.85%
+Ep 165| LR: 1.91e-05 | Train Loss: 0.7947 | Train Acc: 99.42% | Val Acc: 90.85%
+Epoch 166/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99.6, loss=0.195]
+Epoch 166 [Val] Loss: 1.0578 | Acc: 91.49%
+Ep 166| LR: 1.81e-05 | Train Loss: 0.7924 | Train Acc: 99.63% | Val Acc: 91.49%
+Epoch 167/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.8, loss=0.193]
+Epoch 167 [Val] Loss: 1.0530 | Acc: 91.28%
+Ep 167| LR: 1.70e-05 | Train Loss: 0.7911 | Train Acc: 99.79% | Val Acc: 91.28%
+Epoch 168/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=99.8, loss=0.197]
+Epoch 168 [Val] Loss: 1.0586 | Acc: 90.85%
+Ep 168| LR: 1.61e-05 | Train Loss: 0.7900 | Train Acc: 99.84% | Val Acc: 90.85%
+Epoch 169/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99.7, loss=0.193]
+Epoch 169 [Val] Loss: 1.0525 | Acc: 91.49%
+Ep 169| LR: 1.51e-05 | Train Loss: 0.7881 | Train Acc: 99.73% | Val Acc: 91.49%
+Epoch 170/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.12it/s, acc=99.8, loss=0.208]
+Epoch 170 [Val] Loss: 1.0731 | Acc: 90.43%
+Ep 170| LR: 1.42e-05 | Train Loss: 0.7834 | Train Acc: 99.84% | Val Acc: 90.43%
+Epoch 171/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.13it/s, acc=100, loss=0.196]
+Epoch 171 [Val] Loss: 1.0637 | Acc: 91.06%
+Ep 171| LR: 1.32e-05 | Train Loss: 0.7858 | Train Acc: 100.00% | Val Acc: 91.06%
+Epoch 172/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.12it/s, acc=99.9, loss=0.193]
+Epoch 172 [Val] Loss: 1.0557 | Acc: 91.06%
+Ep 172| LR: 1.24e-05 | Train Loss: 0.7846 | Train Acc: 99.89% | Val Acc: 91.06%
+Epoch 173/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.8, loss=0.193]
+Epoch 173 [Val] Loss: 1.0552 | Acc: 91.49%
+Ep 173| LR: 1.15e-05 | Train Loss: 0.7853 | Train Acc: 99.79% | Val Acc: 91.49%
+Epoch 174/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=99.1, loss=0.197]
+Epoch 174 [Val] Loss: nan | Acc: 2.55%
+Ep 174| LR: 1.07e-05 | Train Loss: nan | Train Acc: 99.10% | Val Acc: 2.55%
+Epoch 175/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99.8, loss=0.195]
+Epoch 175 [Val] Loss: nan | Acc: 2.55%
+Ep 175| LR: 9.90e-06 | Train Loss: 0.7877 | Train Acc: 99.84% | Val Acc: 2.55%
+Epoch 176/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.7, loss=0.198]
+Epoch 176 [Val] Loss: nan | Acc: 2.55%
+Ep 176| LR: 9.14e-06 | Train Loss: 0.7845 | Train Acc: 99.68% | Val Acc: 2.55%
+Epoch 177/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.13it/s, acc=99.5, loss=0.194]
+Epoch 177 [Val] Loss: nan | Acc: 2.55%
+Ep 177| LR: 8.40e-06 | Train Loss: 0.7890 | Train Acc: 99.52% | Val Acc: 2.55%
+Epoch 178/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=99.7, loss=0.198]
+Epoch 178 [Val] Loss: nan | Acc: 2.55%
+Ep 178| LR: 7.70e-06 | Train Loss: 0.7857 | Train Acc: 99.73% | Val Acc: 2.55%
+Epoch 179/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99.7, loss=0.196]
+Epoch 179 [Val] Loss: nan | Acc: 2.55%
+Ep 179| LR: 7.02e-06 | Train Loss: 0.7859 | Train Acc: 99.73% | Val Acc: 2.55%
+Epoch 180/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99.6, loss=0.189]
+Epoch 180 [Val] Loss: nan | Acc: 2.55%
+Ep 180| LR: 6.38e-06 | Train Loss: 0.7908 | Train Acc: 99.63% | Val Acc: 2.55%
+Epoch 181/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99.7, loss=0.198]
+Epoch 181 [Val] Loss: nan | Acc: 2.55%
+Ep 181| LR: 5.76e-06 | Train Loss: 0.7830 | Train Acc: 99.73% | Val Acc: 2.55%
+Epoch 182/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99.9, loss=0.193]
+Epoch 182 [Val] Loss: nan | Acc: 2.55%
+Ep 182| LR: 5.18e-06 | Train Loss: 0.7819 | Train Acc: 99.89% | Val Acc: 2.55%
+Epoch 183/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=99.8, loss=0.192]
+Epoch 183 [Val] Loss: nan | Acc: 2.55%
+Ep 183| LR: 4.62e-06 | Train Loss: 0.7837 | Train Acc: 99.79% | Val Acc: 2.55%
+Epoch 184/200 [Train]: 100%|███████████████| 118/118 [00:24<00:00,  4.86it/s, acc=99.8, loss=0.2]
+Epoch 184 [Val] Loss: nan | Acc: 2.55%
+Ep 184| LR: 4.10e-06 | Train Loss: 0.7855 | Train Acc: 99.84% | Val Acc: 2.55%
+Epoch 185/200 [Train]: 100%|██████████████| 118/118 [00:23<00:00,  5.06it/s, acc=99.8, loss=0.19]
+Epoch 185 [Val] Loss: nan | Acc: 2.55%
+Ep 185| LR: 3.60e-06 | Train Loss: 0.7840 | Train Acc: 99.79% | Val Acc: 2.55%
+Epoch 186/200 [Train]: 100%|█████████████| 118/118 [00:25<00:00,  4.60it/s, acc=99.8, loss=0.193]
+Epoch 186 [Val] Loss: nan | Acc: 2.55%
+Ep 186| LR: 3.14e-06 | Train Loss: 0.7846 | Train Acc: 99.79% | Val Acc: 2.55%
+Epoch 187/200 [Train]:  27%|████▌            | 32/118 [00:07<00:19,  4.30it/s, acc=100, loss=0.2]Epoch 187/200 [Train]:  27%|████▌            | 32/118 [00:07<00:21,  4.07it/s, acc=100, loss=0.2]
+Traceback (most recent call last):
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/train/train.py", line 191, in <module>
+    main()
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/train/train.py", line 170, in main
+    train_loss, train_acc = train_one_epoch(model, train_loader, criterion, optimizer, scaler, device, epoch)
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/train/train.py", line 86, in train_one_epoch
+    running_loss += loss.item() * ACCUMULATION_STEPS
+KeyboardInterrupt
+
+(skateformer) phonght@phonght:/mnt/A87E3F8E7E3F5472/CapstoneProject$ python my_src/train/train.py 
+Device: cuda
+Train samples: 1882, Val samples: 470
+/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/torch/functional.py:478: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1659484809662/work/aten/src/ATen/native/TensorShape.cpp:2894.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+--> No valid checkpoint found or RESUME_PATH is None. Training from scratch.
+Starting training for 200 epochs...
+Epoch 174/200 [Train]:   0%|                                             | 0/118 [00:00<?, ?it/s]Epoch 174/200 [Train]:   0%|                                             | 0/118 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/train/train.py", line 231, in <module>
+    main()
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/train/train.py", line 210, in main
+    train_loss, train_acc = train_one_epoch(model, train_loader, criterion, optimizer, scaler, device, epoch)
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/train/train.py", line 69, in train_one_epoch
+    outputs = model(data, index_t)
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/models/SkateFormer.py", line 433, in forward
+    output = layer(output)
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 457, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 453, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt
+
+(skateformer) phonght@phonght:/mnt/A87E3F8E7E3F5472/CapstoneProject$ cls
+Command 'cls' not found, but there are 20 similar ones.
+(skateformer) phonght@phonght:/mnt/A87E3F8E7E3F5472/CapstoneProject$ python my_src/train/train.py 
+Device: cuda
+Train samples: 1882, Val samples: 470
+/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/torch/functional.py:478: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1659484809662/work/aten/src/ATen/native/TensorShape.cpp:2894.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+--> Loading checkpoint: my_src/results/20251228_230449/best_skateformer_model.pth
+--> Resume weights success!
+--> Validating loaded model...
+Epoch 0 [Val] Loss: 0.4638 | Acc: 91.49%
+--> Current Best Acc: 91.49%
+Starting training for 200 epochs...
+Epoch 174/200 [Train]: 100%|███████████████| 118/118 [00:24<00:00,  4.83it/s, acc=99.7, loss=0.2]
+Epoch 174 [Val] Loss: 1.0519 | Acc: 90.64%
+Ep 174| LR: 8.00e-06 | Train Loss: 0.7949 | Train Acc: 99.73% | Val Acc: 90.64%
+Epoch 175/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.02it/s, acc=99.6, loss=0.198]
+Epoch 175 [Val] Loss: 1.0643 | Acc: 91.70%
+Ep 175| LR: 1.60e-05 | Train Loss: 0.8066 | Train Acc: 99.57% | Val Acc: 91.70%
+----> Saved Best Model: 91.70%
+Epoch 176/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.12it/s, acc=99.4, loss=0.197]
+Epoch 176 [Val] Loss: 1.0530 | Acc: 90.43%
+Ep 176| LR: 2.40e-05 | Train Loss: 0.8009 | Train Acc: 99.36% | Val Acc: 90.43%
+Epoch 177/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  4.99it/s, acc=99.7, loss=0.199]
+Epoch 177 [Val] Loss: 1.0600 | Acc: 91.06%
+Ep 177| LR: 3.20e-05 | Train Loss: 0.7974 | Train Acc: 99.73% | Val Acc: 91.06%
+Epoch 178/200 [Train]:   9%|█▎            | 11/118 [00:02<00:25,  4.17it/s, acc=99.4, loss=0.204]
+[WARNING] NaN loss detected at Epoch 178, Batch 11. Skipping step.
+Epoch 178/200 [Train]:  10%|█▍            | 12/118 [00:02<00:25,  4.18it/s, acc=99.4, loss=0.204]
+Traceback (most recent call last):
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/train/train.py", line 231, in <module>
+    main()
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/train/train.py", line 210, in main
+    train_loss, train_acc = train_one_epoch(model, train_loader, criterion, optimizer, scaler, device, epoch)
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/train/train.py", line 69, in train_one_epoch
+    outputs = model(data, index_t)
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/models/SkateFormer.py", line 444, in forward
+    output = self.forward_features(output)
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/models/SkateFormer.py", line 416, in forward_features
+    output = stage(output)
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/models/SkateFormer.py", line 321, in forward
+    output = block(output)
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/models/SkateFormer.py", line 280, in forward
+    output = self.transformer(input)
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/models/SkateFormer.py", line 188, in forward
+    f = self.mapping(self.norm_1(input)).permute(0, 3, 1, 2).contiguous()
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: CUDA out of memory. Tried to allocate 20.00 MiB (GPU 0; 3.80 GiB total capacity; 1.94 GiB already allocated; 29.44 MiB free; 2.01 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+(skateformer) phonght@phonght:/mnt/A87E3F8E7E3F5472/CapstoneProject$ python my_src/train/train.py 
+Enter checkpoint path to resume (or leave blank to train from scratch): my_src/results/20251229_004830/best_skateformer_model.pth
+Enter start epoch (default 1): 177
+Device: cuda
+Train samples: 1882, Val samples: 470
+/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/torch/functional.py:478: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1659484809662/work/aten/src/ATen/native/TensorShape.cpp:2894.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+--> Loading checkpoint: my_src/results/20251229_004830/best_skateformer_model.pth
+--> Resume weights success!
+--> Validating loaded model...
+Epoch 0 [Val] Loss: 0.5051 | Acc: 91.70%
+--> Current Best Acc: 91.70%
+Starting training for 200 epochs...
+Epoch 177/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.14it/s, acc=99.8, loss=0.202]
+Epoch 177 [Val] Loss: 1.0491 | Acc: 91.28%
+Ep 177| LR: 8.00e-06 | Train Loss: 0.7903 | Train Acc: 99.79% | Val Acc: 91.28%
+Epoch 178/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.22it/s, acc=99.7, loss=0.197]
+Epoch 178 [Val] Loss: 1.0566 | Acc: 91.06%
+Ep 178| LR: 1.60e-05 | Train Loss: 0.7945 | Train Acc: 99.73% | Val Acc: 91.06%
+Epoch 179/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.20it/s, acc=99.4, loss=0.197]
+Epoch 179 [Val] Loss: 1.0551 | Acc: 90.21%
+Ep 179| LR: 2.40e-05 | Train Loss: 0.8001 | Train Acc: 99.42% | Val Acc: 90.21%
+Epoch 180/200 [Train]:  33%|████▋         | 39/118 [00:07<00:15,  5.26it/s, acc=99.8, loss=0.207]
+[WARNING] NaN gradient detected at Epoch 180, Batch 39. Skipping update.
+Epoch 180/200 [Train]:  36%|█████         | 43/118 [00:08<00:14,  5.01it/s, acc=99.9, loss=0.205]
+Traceback (most recent call last):
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/train/train.py", line 232, in <module>
+    main()
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/train/train.py", line 211, in main
+    train_loss, train_acc = train_one_epoch(model, train_loader, criterion, optimizer, scaler, device, epoch)
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/train/train.py", line 87, in train_one_epoch
+    scaler.unscale_(optimizer)
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/torch/cuda/amp/grad_scaler.py", line 270, in unscale_
+    raise RuntimeError("unscale_() has already been called on this optimizer since the last update().")
+RuntimeError: unscale_() has already been called on this optimizer since the last update().
+(skateformer) phonght@phonght:/mnt/A87E3F8E7E3F5472/CapstoneProject$ python my_src/train/train.py 
+Enter checkpoint path to resume (or leave blank to train from scratch): my_src/results/20251229_004830/best_skateformer_model.pth
+Enter start epoch (default 1): 180
+Device: cuda
+Train samples: 1882, Val samples: 470
+/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/torch/functional.py:478: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at  /opt/conda/conda-bld/pytorch_1659484809662/work/aten/src/ATen/native/TensorShape.cpp:2894.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+--> Loading checkpoint: my_src/results/20251229_004830/best_skateformer_model.pth
+--> Resume weights success!
+--> Validating loaded model...
+Epoch 0 [Val] Loss: 0.5051 | Acc: 91.70%
+--> Current Best Acc: 91.70%
+Starting training for 200 epochs...
+Epoch 180/200 [Train]: 100%|█████████████| 118/118 [00:24<00:00,  4.85it/s, acc=99.8, loss=0.202]
+Epoch 180 [Val] Loss: 1.0491 | Acc: 91.28%
+Ep 180| LR: 8.00e-06 | Train Loss: 0.7903 | Train Acc: 99.79% | Val Acc: 91.28%
+Epoch 181/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.18it/s, acc=99.7, loss=0.197]
+Epoch 181 [Val] Loss: 1.0566 | Acc: 91.06%
+Ep 181| LR: 1.60e-05 | Train Loss: 0.7945 | Train Acc: 99.73% | Val Acc: 91.06%
+Epoch 182/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.08it/s, acc=99.4, loss=0.197]
+Epoch 182 [Val] Loss: 1.0551 | Acc: 90.21%
+Ep 182| LR: 2.40e-05 | Train Loss: 0.8001 | Train Acc: 99.42% | Val Acc: 90.21%
+Epoch 183/200 [Train]: 100%|███████████████| 118/118 [00:22<00:00,  5.20it/s, acc=99.2, loss=0.2]
+Epoch 183 [Val] Loss: 1.0607 | Acc: 90.85%
+Ep 183| LR: 3.20e-05 | Train Loss: 0.8080 | Train Acc: 99.20% | Val Acc: 90.85%
+Epoch 184/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.19it/s, acc=99.5, loss=0.202]
+Epoch 184 [Val] Loss: 1.0676 | Acc: 91.06%
+Ep 184| LR: 4.00e-05 | Train Loss: 0.7990 | Train Acc: 99.47% | Val Acc: 91.06%
+Epoch 185/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.18it/s, acc=99.6, loss=0.199]
+Epoch 185 [Val] Loss: 1.0490 | Acc: 92.34%
+Ep 185| LR: 4.80e-05 | Train Loss: 0.7954 | Train Acc: 99.63% | Val Acc: 92.34%
+----> Saved Best Model: 92.34%
+Epoch 186/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.17it/s, acc=99.7, loss=0.212]
+Epoch 186 [Val] Loss: 1.0668 | Acc: 90.64%
+Ep 186| LR: 5.60e-05 | Train Loss: 0.7989 | Train Acc: 99.73% | Val Acc: 90.64%
+Epoch 187/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.17it/s, acc=99.1, loss=0.195]
+Epoch 187 [Val] Loss: 1.0419 | Acc: 91.49%
+Ep 187| LR: 6.40e-05 | Train Loss: 0.8066 | Train Acc: 99.15% | Val Acc: 91.49%
+Epoch 188/200 [Train]: 100%|██████████████| 118/118 [00:22<00:00,  5.17it/s, acc=99.6, loss=0.19]
+Epoch 188 [Val] Loss: 1.0531 | Acc: 90.64%
+Ep 188| LR: 7.20e-05 | Train Loss: 0.8095 | Train Acc: 99.57% | Val Acc: 90.64%
+Epoch 189/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.15it/s, acc=99.7, loss=0.219]
+Epoch 189 [Val] Loss: 1.0796 | Acc: 90.21%
+Ep 189| LR: 8.00e-05 | Train Loss: 0.8030 | Train Acc: 99.68% | Val Acc: 90.21%
+Epoch 190/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.16it/s, acc=99.3, loss=0.211]
+Epoch 190 [Val] Loss: 1.0688 | Acc: 89.36%
+Ep 190| LR: 8.80e-05 | Train Loss: 0.8102 | Train Acc: 99.31% | Val Acc: 89.36%
+Epoch 191/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.16it/s, acc=98.9, loss=0.224]
+Epoch 191 [Val] Loss: 1.0726 | Acc: 90.00%
+Ep 191| LR: 9.60e-05 | Train Loss: 0.8231 | Train Acc: 98.94% | Val Acc: 90.00%
+Epoch 192/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.15it/s, acc=99.7, loss=0.203]
+Epoch 192 [Val] Loss: 1.1020 | Acc: 88.94%
+Ep 192| LR: 1.04e-04 | Train Loss: 0.8061 | Train Acc: 99.68% | Val Acc: 88.94%
+Epoch 193/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.15it/s, acc=98.6, loss=0.216]
+Epoch 193 [Val] Loss: 1.1062 | Acc: 89.57%
+Ep 193| LR: 1.12e-04 | Train Loss: 0.8250 | Train Acc: 98.62% | Val Acc: 89.57%
+Epoch 194/200 [Train]: 100%|███████████████| 118/118 [00:23<00:00,  5.00it/s, acc=99, loss=0.228]
+Epoch 194 [Val] Loss: 1.1091 | Acc: 89.36%
+Ep 194| LR: 1.20e-04 | Train Loss: 0.8194 | Train Acc: 98.99% | Val Acc: 89.36%
+Epoch 195/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  5.00it/s, acc=98.9, loss=0.196]
+Epoch 195 [Val] Loss: 1.0858 | Acc: 89.57%
+Ep 195| LR: 1.28e-04 | Train Loss: 0.8290 | Train Acc: 98.94% | Val Acc: 89.57%
+Epoch 196/200 [Train]: 100%|███████████████| 118/118 [00:23<00:00,  5.01it/s, acc=99, loss=0.205]
+Epoch 196 [Val] Loss: 1.1277 | Acc: 88.09%
+Ep 196| LR: 1.36e-04 | Train Loss: 0.8273 | Train Acc: 99.04% | Val Acc: 88.09%
+Epoch 197/200 [Train]: 100%|█████████████| 118/118 [00:23<00:00,  4.93it/s, acc=98.9, loss=0.199]
+Epoch 197 [Val] Loss: 1.0998 | Acc: 89.15%
+Ep 197| LR: 1.44e-04 | Train Loss: 0.8320 | Train Acc: 98.94% | Val Acc: 89.15%
+Epoch 198/200 [Train]: 100%|█████████████| 118/118 [00:24<00:00,  4.77it/s, acc=98.9, loss=0.223]
+Epoch 198 [Val] Loss: 1.1041 | Acc: 89.15%
+Ep 198| LR: 1.52e-04 | Train Loss: 0.8415 | Train Acc: 98.88% | Val Acc: 89.15%
+Epoch 199/200 [Train]: 100%|█████████████| 118/118 [00:24<00:00,  4.82it/s, acc=98.6, loss=0.219]
+Epoch 199 [Val] Loss: 1.1075 | Acc: 90.00%
+Ep 199| LR: 1.60e-04 | Train Loss: 0.8449 | Train Acc: 98.57% | Val Acc: 90.00%
+Epoch 200/200 [Train]: 100%|█████████████| 118/118 [00:22<00:00,  5.13it/s, acc=98.7, loss=0.216]
+Epoch 200 [Val] Loss: 1.1407 | Acc: 88.30%
+Ep 200| LR: 1.68e-04 | Train Loss: 0.8411 | Train Acc: 98.72% | Val Acc: 88.30%
+Traceback (most recent call last):
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/train/train.py", line 234, in <module>
+    main()
+  File "/mnt/A87E3F8E7E3F5472/CapstoneProject/my_src/train/train.py", line 231, in main
+    plt.savefig('my/result.png')
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/matplotlib/pyplot.py", line 1023, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/matplotlib/figure.py", line 3343, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2366, in print_figure
+    result = print_method(
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2232, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 509, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 458, in _print_pil
+    mpl.image.imsave(
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/matplotlib/image.py", line 1689, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/home/phonght/anaconda3/envs/skateformer/lib/python3.9/site-packages/PIL/Image.py", line 2428, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: 'my/result.png'
+(skateformer) phonght@phonght:/mnt/A87E3F8E7E3F5472/CapstoneProject$ ^C
+

@@ -1,0 +1,52 @@
+name: skateformer
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - pip
+  - ffmpeg
+  - mkl
+  - mkl-service
+  - joblib
+  - requests
+  - setuptools
+  - wheel
+  - tensorboardx
+  - typing_extensions
+  - tqdm
+  # Các thư viện hệ thống cần thiết
+  - libtiff 
+  - libjpeg-turbo
+  
+  - pip:
+      # --- QUAN TRỌNG: Cấu hình cho RTX 5060 Ti (sm_120) ---
+      # Tải PyTorch bản mới nhất hỗ trợ CUDA 12.x
+      - --extra-index-url https://download.pytorch.org/whl/cu124
+      - torch
+      - torchvision
+      - torchaudio
+      # ----------------------------------------------------
+
+      - absl-py
+      - einops
+      - huggingface-hub
+      - loguru
+      - matplotlib
+      - msgpack
+      - msgpack-numpy
+      - numpy  # Để tự động chọn bản compatible với PyTorch mới
+      - scipy
+      - scikit-learn
+      - h5py
+      - pillow
+      - protobuf
+      - psutil
+      - safetensors
+      - tabulate
+      - tensorboard
+      - tensorpack
+      - timm==0.6.12  # Giữ nguyên version này vì SkateFormer cần
+      - torchpack
+      - pyyaml
