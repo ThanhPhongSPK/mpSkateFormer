@@ -476,16 +476,16 @@ def create_mediapipe_skateformer(num_classes=60):
         num_classes=num_classes,
         num_frames=64,
         num_people=1,
-        num_points=36,
+        num_points=32,
         embed_dim=96,
         depths =(2, 2, 2, 2),
         channels=(96, 192, 192, 192),
 
         # Partition Config (CRITICAL)
         type_1_size=(8, 4), 
-        type_2_size=(8, 9), 
+        type_2_size=(8, 8), 
         type_3_size=(8, 4), 
-        type_4_size=(8, 9),
+        type_4_size=(8, 8),
 
         # Temporal Index Embedding
         index_t=True,

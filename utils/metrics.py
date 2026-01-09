@@ -101,7 +101,7 @@ class Metrics:
         self.reset()
         
         return top1_acc
-    
+
     def save_confusion_matrix(self):
         """Save final confusion matrix at end of training"""
         y_true = np.array(self.all_labels)
@@ -125,3 +125,16 @@ class Metrics:
                 writer.writerow([row_label] + row.tolist())
         
         print(f"Confusion matrix saved to {cm_path}")
+
+def setup_logger(result_folder):
+    """
+    Creates a logger that writes to both console and a log file.
+    """
+    log_file_path = os.path.join(result_folder, "train.log")
+    
+    def log(msg):
+        print(msg)  # Print to console
+        with open(log_file_path, "a") as f:
+            f.write(str(msg) + "\n")  # Write to file
+            
+    return log

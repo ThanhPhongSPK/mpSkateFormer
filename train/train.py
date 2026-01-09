@@ -19,7 +19,7 @@ sys.path.insert(0, "/home/ducduy/Phong")
 
 from my_src.utils.dataloader import MediaPipeSkateDataset, NTU60_CLASSES, _get_ntu60_split
 from my_src.models.SkateFormer import create_mediapipe_skateformer
-from my_src.utils.metrics import Metrics
+from my_src.utils.metrics import Metrics, setup_logger
 
 # --- Configurations ---
 BASE_DATA_PATH = '/home/ducduy/Phong/mp_skeletons'
@@ -38,9 +38,6 @@ DATA_FOLDERS = [
     'nturgbd_rgb_s010_single_actor/nturgb+d_skeleton',
 ]
 
-result_folder = f"my_src/results/{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}"
-os.makedirs(result_folder, exist_ok=True)
-
 # Resume training if needed
 RESUME_PATH = input("Enter checkpoint path to resume (or leave blank to train from scratch): ").strip()
 START_EPOCH_INPUT = input("Enter start epoch (default 1): ").strip()
@@ -48,15 +45,15 @@ START_EPOCH = int(START_EPOCH_INPUT) if START_EPOCH_INPUT else 1
 
 # If set BATCH_SIZE = 64 and BASE_LR = 1e-3, use small ACCUMULATION_STEPS 
 BATCH_SIZE = 64
-BASE_LR = 1e-3
+BASE_LR = 5e-4
 ACCUMULATION_STEPS = 2
 
 # BASE_LR = 2e-4
 # BATCH_SIZE = 16
 # ACCUMULATION_STEPS = 4
 
-EPOCHS = 300
-WARMUP_EPOCHS = 25
+EPOCHS = 200
+WARMUP_EPOCHS = 20
 NUM_CLASSES = 60
 FRAMES_LEN = 64
 
@@ -137,7 +134,7 @@ def train_one_epoch(model, loader, criterion, optimizer, scaler, mixup_fn, devic
 
     return running_loss / len(loader), 100.*correct / total
 
-def validate(model, loader, criterion, device, epoch, metrics_collector=None):
+def validate(model, loader, criterion, device, epoch, metrics_collector=None, logger=None):
     model.eval()
     correct = 0
     total = 0
@@ -160,32 +157,53 @@ def validate(model, loader, criterion, device, epoch, metrics_collector=None):
 
         acc = 100. * correct / total
         val_loss = running_loss / len(loader)
-        print(f"Epoch {epoch} [Val] Loss: {running_loss/len(loader):.4f} | Acc: {acc:.2f}%")
+
+        msg = f"Epoch {epoch} [Val] Loss: {running_loss/len(loader):.4f} | Acc: {acc:.2f}%"
+        if logger is not None:
+            logger(msg)
+        else:
+            print(msg)
         return acc, val_loss
     
 # Custom Cosine Scheduler with Warmup
 def get_scheduler(optimizer, num_epochs, warmup_epochs):
-    def lr_lambda(current_epoch):
-        if current_epoch < warmup_epochs:
-            return float(current_epoch) / float(max(1, warmup_epochs))
-        progress = float(current_epoch - warmup_epochs) / float(max(1, num_epochs - warmup_epochs))
-        return 0.5 * (1. + math.cos(math.pi * progress))
-    return optim.lr_scheduler.LambdaLR(optimizer, lr_lambda)
+    # def lr_lambda(current_epoch):
+    #     if current_epoch < warmup_epochs:
+    #         return float(current_epoch) / float(max(1, warmup_epochs))
+    #     progress = float(current_epoch - warmup_epochs) / float(max(1, num_epochs - warmup_epochs))
+    #     return 0.5 * (1. + math.cos(math.pi * progress))
+    # return optim.lr_scheduler.LambdaLR(optimizer, lr_lambda)
+    sheduler = optim.lr_scheduler.CosineAnnealingWarmRestarts(
+        optimizer,
+        T_0=50,
+        T_mult=1,
+        eta_min=1e-6,
+    )
+    return sheduler
+
 
 def main():
-    set_seed(SEED)
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    print(f"Device: {device}")
 
     full_data_folders = [os.path.join(BASE_DATA_PATH, f) for f in DATA_FOLDERS]
+    result_folder = f"my_src/results/{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}"
+    os.makedirs(result_folder, exist_ok=True)
 
-    print("--> Splitting data using NTU X-Sub protocol...")
+    # Init Logger
+    logger = setup_logger(result_folder)
+
+    set_seed(SEED)
+
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    logger(f"Device: {device}")
+
+    
+    logger("--> Splitting data using NTU X-Sub protocol...")
     train_files, val_files = _get_ntu60_split(full_data_folders, split_type='xsub')
     
-    print(f"\n=== Dataset Summary ===")
-    print(f"Total folders: {len(DATA_FOLDERS)}")
-    print(f"Train files: {len(train_files)} | Val files: {len(val_files)}")
-    print(f"========================\n")
+    logger(f"\n=== Dataset Summary ===")
+    logger(f"Total folders: {len(DATA_FOLDERS)}")
+    logger(f"Train files: {len(train_files)} | Val files: {len(val_files)}")
+    logger(f"========================\n")
 
     train_set = MediaPipeSkateDataset(train_files, mode='train', frames_len=FRAMES_LEN)
     val_set = MediaPipeSkateDataset(val_files, mode='val', frames_len=FRAMES_LEN)
@@ -203,7 +221,7 @@ def main():
     current_best_acc = 0.0
     start_epoch = START_EPOCH
     if RESUME_PATH and os.path.exists(RESUME_PATH):
-        print(f"--> Loading checkpoint: {RESUME_PATH}")
+        logger(f"--> Loading checkpoint: {RESUME_PATH}")
         checkpoint = torch.load(RESUME_PATH, map_location=device)
 
         if isinstance(checkpoint, dict) and 'state_dict' not in checkpoint:
@@ -211,14 +229,13 @@ def main():
         else:
              model.load_state_dict(checkpoint['model_state_dict'] if 'model_state_dict' in checkpoint else checkpoint)
 
-        print("--> Resume weights success!")
+        logger("--> Resume weights success!")
 
-        print("--> Validating loaded model...")
-        current_best_acc, _ = validate(model, val_loader, nn.CrossEntropyLoss(), device, epoch=0)
-        print(f"--> Current Best Acc: {current_best_acc:.2f}%")
-
+        logger("--> Validating loaded model...")
+        current_best_acc, _ = validate(model, val_loader, nn.CrossEntropyLoss(), device, epoch=0, logger=logger)
+        logger(f"--> Current Best Acc: {current_best_acc:.2f}%")
     else:
-        print("--> No valid checkpoint found or RESUME_PATH is None. Training from scratch.")
+        logger("--> No valid checkpoint found or RESUME_PATH is None. Training from scratch.")
 
     # Mixup Object
     mixup_fn = Mixup(
@@ -240,7 +257,7 @@ def main():
     # Loop
     best_acc = current_best_acc
     
-    print(f"Starting training for {EPOCHS} epochs...")
+    logger(f"Starting training for {EPOCHS} epochs...")
     for epoch in range(start_epoch, EPOCHS+1):
         train_loss, train_acc = train_one_epoch(model, train_loader, train_criterion, optimizer, scaler, mixup_fn, device, epoch)
         val_acc, val_loss = validate(model, val_loader, val_criterion, device, epoch, metrics_collector=metrics_collector)
@@ -248,7 +265,7 @@ def main():
         scheduler.step()
         curr_lr = optimizer.param_groups[0]['lr']
 
-        print(f"Ep {epoch}| LR: {curr_lr:.2e} | Train Loss: {train_loss:.4f} | Train Acc: {train_acc:.2f}% | Val Acc: {val_acc:.2f}%")
+        logger(f"Ep {epoch}| LR: {curr_lr:.2e} | Train Loss: {train_loss:.4f} | Train Acc: {train_acc:.2f}% | Val Acc: {val_acc:.2f}%")
 
         # Save epoch metrics
         metrics_collector.save_epoch_metrics(epoch, train_loss, val_loss, train_acc)
@@ -258,7 +275,7 @@ def main():
             torch.save(model.state_dict(), f"{result_folder}/best_skateformer_model.pth")
             print(f"----> Saved Best Model: {best_acc:.2f}%")
 
-    validate(model, val_loader, criterion, device, epoch=EPOCHS, metrics_collector=metrics_collector)
+    validate(model, val_loader, val_criterion, device, epoch=EPOCHS, metrics_collector=metrics_collector, logger=logger)
     metrics_collector.save_confusion_matrix()
 
 if __name__ == "__main__":

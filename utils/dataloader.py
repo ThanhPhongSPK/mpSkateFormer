@@ -33,8 +33,6 @@ def _get_ntu60_split(base_folders_list, split_type='xsub'):
     train_files = []
     val_files = []
 
-
-
     train_subjects = [
         1, 2, 4, 5, 8, 9, 13, 14, 15, 16, 17, 18, 19, 25, 27, 28, 31, 34, 35, 38
     ]
@@ -73,17 +71,17 @@ class MediaPipeSkateDataset(Dataset):
         self.mode = mode
 
         # Padding from 33 to Raumania 36
+        # Neighboring partition
         self.new_order = [
-            11, 13, 15, 17, # Left Arm
-            12, 14, 16, 18, # Right Arm
-            19, 21, 23, -1, # Left Hand + Hip + Pad
-            20, 22, 24, -1, # Right Hand + Hip + Pad
-            25, 27, 29, 31, # Left Leg
-            26, 28, 30, 32, # Right Leg
-            0, 1, 4, -1,    # Face Core + Pad
-            2, 3, 7, -1,    # Face Left + Pad
-            5, 6, 8, -1     # Face Right + Pad
-        ] # -1 indicates padding
+            16, 20, 18, 22, # Right hand 
+            15, 19, 17, 21, # Left hand
+            24, 26, 28, 32, # Right leg
+            23, 25, 27, 31, # Left leg
+            12, 11, 14, 13, # Horizontal Torso
+            0, 1, 9, 10,    # Face central
+            2, 5, 7, 8,     # Face Outer (Eyes, ears)
+            29, 30, 3, 6    # Heels & Peripheral
+        ] # 32 joints, dropped joint 4 (eye)
 
     def __len__(self):
         return len(self.files)
@@ -93,32 +91,34 @@ class MediaPipeSkateDataset(Dataset):
         raw_data = np.load(file_path) # T x 33 x 4
 
         # Sampling (Resize time dimension)
-        data = self.temporal_sampling(raw_data, self.frames_len)
-
-        # Skeleton Re-ordering & Padding (33 -> 36)
-        T, V_old, C = data.shape
-        new_data = np.zeros((T, 36, 3)) # Take only XYZ
-        for i, joint_idx in enumerate(self.new_order):
-            if joint_idx == -1:
-                new_data[:, i, :] = 0.0 # Padding
-            else:
-                new_data[:, i, :] = data[:, joint_idx, :3]
+        data = self.temporal_sampling(raw_data, self.frames_len) # T x 33 x 4
 
         # Normalize (Central to Hip Center)
         left_hip = data[:, 23, :3]
         right_hip = data[:, 24, :3]
         center = (left_hip + right_hip) / 2.0
-        new_data = new_data - center[:, None, :] # (T, 36, 3)
-
-        # Scale Normalization
-        left_shoulder = new_data[:, 0, :]
-        right_shoulder = new_data[:, 4, :]
+        
+        left_shoulder = data[:, 11, :3]
+        right_shoulder = data[:, 12, :3]
 
         torso_size = np.linalg.norm(left_shoulder - right_shoulder, axis=1).mean()
-        if torso_size > 1e-6:
-            new_data = new_data / torso_size
-        else:
-            pass # Avoid division by zero
+
+        # Re-ordering & Normalization Application
+        T = data.shape[0]
+        new_data = np.zeros((T, 32, 3)) # T x 32 x4
+
+        for i, joint_idx in enumerate(self.new_order):
+            # Original joint data
+            joint_data = data[:, joint_idx, :3] # T x 3
+
+            # Centering normalization
+            joint_data = joint_data - center
+
+            # Torso scaling normalization
+            if torso_size > 1e-6:
+                joint_data = joint_data / torso_size
+
+            new_data[:, i, :] = joint_data
 
         # Data Augmentation (Train mode only)
         if self.mode == 'train':
@@ -126,7 +126,7 @@ class MediaPipeSkateDataset(Dataset):
 
         # Final input (C, T, V, M)
         # SkateFormer input: (Batch, Channels, Frames, Joints, Persons)
-        out_tensor = torch.FloatTensor(new_data).permute(2, 0, 1).unsqueeze(-1) # (3, T, 36, 1)
+        out_tensor = torch.FloatTensor(new_data).permute(2, 0, 1).unsqueeze(-1) # (3, T, 32, 1)
         label = self.get_label_from_name(os.path.basename(file_path))
 
         # Skate-Embedding
