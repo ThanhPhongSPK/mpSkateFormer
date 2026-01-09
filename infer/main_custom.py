@@ -8,14 +8,14 @@ import time
 import mediapipe as mp
 from collections import deque
 
-sys.path.insert(0, '/mnt/A87E3F8E7E3F5472/CapstoneProject')
+sys.path.insert(0, "/home/ducduy/Phong")
 
 from my_src.models.SkateFormer import create_mediapipe_skateformer
 from my_src.utils.dataloader import NTU60_CLASSES
 
 # CONFIG
-CHECKPOINT_PATH = "my_src/results/20251229_010500_final/best_skateformer_model.pth"
-INPUT_VIDEO_PATH = r"my_src/video/Test_video.mp4"
+CHECKPOINT_PATH = "/home/ducduy/Phong/my_src/results/20260108_011627/best_skateformer_model.pth"
+INPUT_VIDEO_PATH = r"/home/ducduy/Phong/my_src/video/Test_video.mp4"
 OUTPUT_VIDEO_PATH = r""
 NUM_CLASSES = 60
 FRAMES_LEN = 64
@@ -34,18 +34,17 @@ class RealTimeProcessor:
         # Sliding Window Buffer: Automatically removes old items when full
         self.skeleton_buffer = deque(maxlen=FRAMES_LEN)
 
-        # Mapping from 33 joints to 36 joints
+        # Mapping from 33 joints to 32 joints
         self.new_order = [
-            11, 13, 15, 17, # Left Arm
-            12, 14, 16, 18, # Right Arm
-            19, 21, 23, -1, # Left Hand + Hip + Pad
-            20, 22, 24, -1, # Right Hand + Hip + Pad
-            25, 27, 29, 31, # Left Leg
-            26, 28, 30, 32, # Right Leg
-            0, 1, 4, -1,    # Face Core + Pad
-            2, 3, 7, -1,    # Face Left + Pad
-            5, 6, 8, -1     # Face Right + Pad
-        ] # -1 indicates padding
+            16, 20, 18, 22, # Right hand 
+            15, 19, 17, 21, # Left hand
+            24, 26, 28, 32, # Right leg
+            23, 25, 27, 31, # Left leg
+            12, 11, 14, 13, # Horizontal Torso
+            0, 1, 9, 10,    # Face central
+            2, 5, 7, 8,     # Face Outer (Eyes, ears)
+            29, 30, 3, 6    # Heels & Peripheral
+        ]
 
     def process_frame(self, frame_rgb):
         """Extracts raw 33 landmarks from a single frame"""
@@ -71,29 +70,36 @@ class RealTimeProcessor:
         # Get data (already size 64 due to deque maxlen)
         data = np.array(self.skeleton_buffer) # (FRAMES_LEN, 33, 4)
         
-        # Skeleton Re-ordering & Padding (33 -> 36)
-        T, V_old, C = data.shape
-        new_data = np.zeros((T, 36, 3)) # Take only XYZ
-        for i, joint_idx in enumerate(self.new_order):
-            if joint_idx != -1:
-                new_data[:, i, :] = data[:, joint_idx, :3]
-
-        # Normalize (Central to Hip Center)
+       # Normalize (Central to Hip Center)
         left_hip = data[:, 23, :3]
         right_hip = data[:, 24, :3]
         center = (left_hip + right_hip) / 2.0
-        new_data = new_data - center[:, None, :] # (FRAMES_LEN, 36, 3)
-
-        # Scale Normalization
-        left_shoulder = new_data[:, 0, :]
-        right_shoulder = new_data[:, 4, :]
+        
+        left_shoulder = data[:, 11, :3]
+        right_shoulder = data[:, 12, :3]
 
         torso_size = np.linalg.norm(left_shoulder - right_shoulder, axis=1).mean()
-        if torso_size > 1e-6:
-            new_data = new_data / torso_size
 
-        # Permute to Model Input Format (Batch=1, Channels=3, Frames=64, Joints=36, Person=1)
-        tensor = torch.FloatTensor(new_data).permute(2, 0, 1).unsqueeze(-1).unsqueeze(0) # (1, 3, T, 36, 1)
+        # Re-ordering & Normalization Application
+        T = data.shape[0]
+        new_data = np.zeros((T, 32, 3)) # T x 32 x4
+
+        for i, joint_idx in enumerate(self.new_order):
+            # Original joint data
+            joint_data = data[:, joint_idx, :3] # T x 3
+
+            # Centering normalization
+            joint_data = joint_data - center
+
+            # Torso scaling normalization
+            if torso_size > 1e-6:
+                joint_data = joint_data / torso_size
+
+            new_data[:, i, :] = joint_data
+
+
+        # Permute to Model Input Format (Batch=1, Channels=3, Frames=64, Joints=32, Person=1)
+        tensor = torch.FloatTensor(new_data).permute(2, 0, 1).unsqueeze(-1).unsqueeze(0) # (1, 3, T, 32, 1)
         return tensor
     
 def main():
@@ -105,7 +111,7 @@ def main():
     model.eval()
 
     # Setup video
-    cap = cv.VideoCapture(0)
+    cap = cv.VideoCapture(INPUT_VIDEO_PATH)
     processor = RealTimeProcessor()
 
     # State variables for display
